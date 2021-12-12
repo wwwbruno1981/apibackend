@@ -12,4 +12,4 @@ mongoose.connect('mongodb+srv://data-02:Mongodb1981@cluster0.lvpqp.mongodb.net/u
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333);
+app.listen(3000);
