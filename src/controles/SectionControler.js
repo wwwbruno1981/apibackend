@@ -4,12 +4,12 @@ const nodemailer = require("nodemailer");
 
 module.exports = {
   async Storage(req, res) {
-    const { nome, email, tel, testo } = req.body;
+    const { name, email, tel, testo } = req.body;
    
-    let user = await User.findOne({ nome, email, tel, testo });
+    let user = await User.findOne({ name, email, tel, testo });
 
     if (!user) {
-     user = await User.create({nome, email, tel, testo})
+     user = await User.create({name, email, tel, testo})
     }
 
     async function main() {
