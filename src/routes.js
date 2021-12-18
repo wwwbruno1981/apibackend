@@ -1,19 +1,13 @@
 const express = require( "express" );
-const SectionControler = require ('./controles/SectionControler')
 const routes = express.Router();
 
 routes.get('/users', (req, res) => {
-    return res.json({idade: req.query.idade});
+    return res.json({Metodo: 'get tudo ok...'});
 });
 
-routes.post('/section', SectionControler.Storage);
+routes.post('/section', (req, res) => {
+    return res.json({Metodo: 'post tudo ok...'});
 
-routes.put('/users/:id', (req, res) => {
-    return res.json({id: req.params.id});
-});
-
-routes.delete('/', (req, res) => {
-    return res.json({message: "Ola"});
 });
 
 module.exports = routes;
